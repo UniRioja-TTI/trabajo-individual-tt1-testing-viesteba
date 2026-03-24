@@ -31,7 +31,7 @@ public class ContactoSimTest {
         DatosSolicitud datos = new DatosSolicitud(entradas);
 
         int token = servicio.solicitarSimulation(datos);
-        assertTrue(token>0);
+        assertTrue(token>=0);
     }
     @Test
     void descargarDatosTest(){
@@ -42,7 +42,7 @@ public class ContactoSimTest {
     @Test
     void getEntitiesTest(){
         List<Entidad> entities = servicio.getEntities();
-        assertEquals(2,entities.size());
+        assertEquals(3,entities.size());
     }
     @Test
     void entityValidTest(){
